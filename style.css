@@ -26,6 +26,8 @@ button{
     padding-top: 25px;
 }
 .block{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
 	width: auto;
 	height: auto;
 	float: left;
