@@ -1,6 +1,13 @@
 let t = 0
 let sec
-
+let a = 1
+let b = 1
+let c = 1
+let p = 1
+let n
+let i
+var chis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+var muArray = ["+", "/","*","-"];
             function init(){
                 if(t == 0){
                     sec = 0;
@@ -15,18 +22,45 @@ let sec
                     childNodes[0].nodeValue = sec;
             }
 let prim = 0;
-function primer(){   
+function primer(){
+        b = Math.floor(Math.random() * chis.length);
+        c = Math.floor(Math.random() * chis.length);
+        if(prim == 0){
+            p = muArray[Math.floor(Math.random()* muArray.length)];
+        }
             if(prim == 0){
-                document.getElementById('game').innerHTML+="<div class='block'>53 + 37 =<input type='Text' id='otvet0'></input><button onclick='knop0()'>отправить</button></div>";
-            };  
-    prim++;
+document.getElementById('game').innerHTML+="<div class='block'><div id='one'></div> <div id='znak'></div>  <div id='two'></div> <div>=<input type='Text' id='otvet0'></input> </div>"+
+"<div><button onclick='knop0()'>отправить</button></div></div>";
+document.getElementById("one").innerHTML = b;
+document.getElementById("two").innerHTML = c;
+document.getElementById("znak").innerHTML = p;
+b = parseInt(b);
+c = parseInt(c);
+            };
+            if(prim == 0){
+                if(p = '*'){
+                     n = b * c
+                };}
+            if(prim == 0){
+                if(p = '-'){
+                    n = b - c
+                };}
+            if(prim == 0){
+                if(p = '+'){
+                    n = b + c
+                };}
+            if(prim == 0){
+                 if(p = '/'){
+                     n = b / c 
+                };}
+            console.log(n);
 }
 function knop0(){
     let otvet0 = document.getElementById("otvet0").value;
         otvet0 = Number.parseInt(otvet0);
-        if (otvet0 == 90) {
+        if (otvet0 == n) {
             $('#otvet0').css('background-color', 'green');
-            document.getElementById('game').innerHTML+="<div class='block'>12 * 4 =<input type='Text' id='otvet1'></input><button onclick='knop1()'>отправить</button></div>";
+document.getElementById('game').innerHTML+="<div class='block'>12 * 4 =<input type='Text' id='otvet1'></input><button onclick='knop1()'>отправить</button></div>";
         }
         else{
             $('#otvet0').css('background-color', 'red');
