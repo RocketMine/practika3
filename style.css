@@ -22,17 +22,34 @@ button{
     width: 200px;
     height: 50px;
 }
+.knopk{
+    border-radius: 30px;
+    width: 200px;
+    height: 40px;
+}
 .opis{
     padding-top: 25px;
 }
 .block{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-	width: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	width: 80%;
 	height: auto;
 	float: left;
-	border: 2px solid aqua;
+	border: 2px solid tomato;
     border-radius: 30px;
 	box-sizing: border-box;
-
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: auto;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 3px;
+}
+.noon{
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px;
+    text-align: center;
 }

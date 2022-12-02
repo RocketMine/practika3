@@ -9,13 +9,23 @@
     <body>
         <div class="vis">
             <div class="shir">
-                <div><h3 align="center">Таймер:</h3><p id="timer" align="center">0</p><p align="center">Секунд</p></div>
-                <div> <h1 align="center"><b>Описание</b></h1></div>
-                <div><p align="center"><button onclick="primer(); init();">Начать</button></p></div>
+                <div>
+                    <h3 align="center">Таймер:</h3><p id="timer" align="center">0</p><p align="center">Секунд</p>
+                </div>
+                <div> 
+                    <h1 align="center"><b>Описание</b></h1>
+                    <p align="center">Вы попали на данный сайт, для того чтобы пройти тест на время!<br>
+                        Здесь проверяется работоспособность вашего ума.
+                    </p>
+                </div>
+                <div>
+                    <p align="center"><button onclick="block(); init();">Начать</button></p>
+                </div>
             </div>
         </div>
         <hr>
-        <div class="opis"><h1 align="center">Вы попали на данный сайт, для того чтобы пройти тест на время!</h1></div>
+        <div class="opis"><h1 align="center">Примеры:</h1></div>
+        <div id="noon" class="noon">Правильно: зелёный, неправильно: красный</div>
         <div id="game" class="game"></div>
     </body>
-</html>
+</html> 
