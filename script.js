@@ -6,8 +6,9 @@ let c = 1
 let p = 1
 var result
 var noon = 0
+var sum 
 var chis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-var muArray = ["+","/","*","-"];
+var muArray = ["+","-","*","-"];
             function init(){
                 if(t == 0){
                     sec = 0;
@@ -28,6 +29,7 @@ document.getElementById('game').innerHTML+="<div class='block'><div id='one'></d
 b = Math.floor(Math.random() * chis.length);
         c = Math.floor(Math.random() * chis.length);
         p = muArray[Math.floor(Math.random()* muArray.length)];
+        sum = 1;
             document.getElementById("one").innerHTML = b;
             document.getElementById("two").innerHTML = c;
             document.getElementById("znak").innerHTML = p;
@@ -40,7 +42,7 @@ b = Math.floor(Math.random() * chis.length);
         break;
         case '-': result = b-c;
         break;
-        case '/': result = b/c;
+        case '/': result = b*c;
         break;
     } 
 }
@@ -48,7 +50,12 @@ function knop0(){
     let otvet0 = document.getElementById("otvet0").value;
         otvet0 = Number.parseInt(otvet0);
         if (otvet0 == result) {
-           noon++;
+            sum++;
+            if(sum == 10){
+                alert('Поздравляю вы прошли тест за: '+sec+' секунд');
+            }
+            else{
+            noon++; 
             $('#noon').css('background-color', 'green');
                 b = Math.floor(Math.random() * chis.length);
                 c = Math.floor(Math.random() * chis.length);
@@ -67,7 +74,8 @@ function knop0(){
                 break;
                 case '/': result = b/c;
                 break;
-        }
+        
+                }    }
         }
         else{
             $('#noon').css('background-color', 'red');
